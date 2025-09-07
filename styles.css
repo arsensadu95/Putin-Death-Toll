@@ -32,3 +32,106 @@ body{
     box-shadow: none;
     color: #e2ba69;
 }
+
+.conflicts-section{
+    margin: 40px auto;
+}
+.section-title{
+    text-align: center;
+    text-transform: uppercase;
+    color: #ff6666;
+    margin-bottom: 30px;
+    font-size: 2.5em;
+    letter-spacing: 1px;
+}
+
+.conflict-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 25px;
+}
+
+.conflict-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,68,68,0.3);
+    border-radius: 12px;
+    padding: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+
+.conflict-card:hover {
+    transform: translateY(-5px);
+    border-color: #ff4444;
+    box-shadow: 0 10px 30px rgba(255, 68, 68, 0.2);
+}
+
+.conflict-name {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #ff6666;
+    margin-bottom: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.conflict-period{
+    font-size: 0.9em;
+    color: #999999;
+    margin-bottom: 15px;
+}
+
+.conflict-casualties{
+    font-size: 2em;
+    font-weight: bold;
+    color: #ff4444;
+    margin-bottom: 10px;
+}
+
+.conflict-description{
+    max-height: 0;
+    overflow: hidden;
+    transition: 0.3s ease-out;
+    color: #cccccc;
+    line-height: 1.6;
+}
+
+.conflict-card.expanded .conflict-description {
+    max-height: 500px;
+    margin-top: 15px;
+    padding-top: 15px;
+    border-top: 1px solid rgba(255,68,68,0.2);
+}
+
+.exapand-icon {
+    color: #ff6666;
+    transition: transform 0.3s ease;
+}
+
+.conflict-card.expanded .expand-icon {
+    transform: rotate(180deg);
+}
+
+.opposition-section{
+    margin: 60px auto;
+    text-align: center;
+    border-radius: 15px;
+    padding: 30px;
+    background: rgba(139,0,0,0.1);
+}
+
+.opposition-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    margin-top: 20px;
+}
+
+.opposition-card{
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,68,68,0.3);
+    border-radius: 8px;
+    padding: 20px;
+    text-align: center;   
+}
